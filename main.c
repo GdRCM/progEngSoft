@@ -7,6 +7,7 @@ ind dados;
 char nmProj[] = "Informe o nome do projeto", orc[] = "Informe o valor total do orcamento",
 pzProj[] = "Informe o total de meses para execucao do projeto",
 pcProj[] = "Quantos meses se passaram desde o inicio do projeto?",
+pRealProj[] = "Informe a % do projeto que está concluida",
 crProj[]="Quanto foi gasto até o presente momento";
 
 void menuPrinc();
@@ -66,6 +67,10 @@ void menuIns(){
 	printf("Periodo concretizado: %s\n",pcProj); //Define quanto tempo correu desde o inicio do projeto
 	scanf("%s", &pcProj);
 	dados.pcPr = atof(pcProj);
+	
+	printf("Parcela do projeto concretizada: %s\n",pRealProj); //Define quanto tempo correu desde o inicio do projeto
+	scanf("%s", &pRealProj);
+	dados.perRea = atof(pRealProj);
 	
 	printf("Valor Gasto: %s\n",crProj); //Define o valor total gasto até o momento atual do projeto
 	scanf("%s", &crProj);
