@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcoes.h"
+#include "funcoes.c"
 #include <locale.h>
 
 int contProg = 0;
@@ -29,8 +30,8 @@ int main(int argc, char *argv[]) {
 
 void menuPrinc(){
 	system("cls");
-	printf("                 Nome do Programa\n\n");
-	printf("===================Tela inicial===================\n\n");
+	printf("            Calculadora de indices GVA\n\n");
+	printf("================Status do Projeto=================\n\n");
 	printf("\t%s\t\n\n", statusProjeto(dados));
 	printf("==================================================\n");
 	printf("\t\tSelecione uma opção\n\n");
@@ -59,7 +60,7 @@ void menuPrinc(){
 
 void menuIns(){
 	system("cls");
-	printf("                 Nome do Programa\n\n");
+	printf("            Calculadora de indices GVA\n\n");
 	printf("================insercao de dados=================\n\n");
 
 	printf("Nome do Projeto: ");
@@ -95,7 +96,7 @@ void menuIns(){
 void menuInfo() {
     dados = calcInd(dados);
     system("cls");
-	printf("                 Nome do Programa\n\n");
+	printf("            Calculadora de indices GVA\n\n");
 	printf("=================Dados do projeto=================\n\n");
 
     //Verifica se foi calculado os idices

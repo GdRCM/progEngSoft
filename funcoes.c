@@ -26,10 +26,10 @@ void printData(ind *i) {
 void printIndeces (ind *i) {
     printf("Valor agregado (VA): %.2f\n", i->va);
     printf("Valor planejado (VP): %.2f\n", i->vp);
-    printf("Varição de prazo (VDP): %.2f\n", i->vdp);
-    printf("Varição de custo (VDC): %.2f\n", i->vdc);
-    printf("Indece de desenpenho de prazo (IDP): %.2f\n", i->idp);
-    printf("Indece de desenpenho de custo (IDC): %.2f\n", i->idc);
+    printf("Variação de prazo (VDP): %.2f\n", i->vdp);
+    printf("Variação de custo (VDC): %.2f\n", i->vdc);
+    printf("Indice de desempenho de prazo (IDP): %.2f\n", i->idp);
+    printf("Indice de desempenho de custo (IDC): %.2f\n", i->idc);
 }
 
 char * statusProjeto(ind *i){
@@ -40,27 +40,27 @@ char * statusProjeto(ind *i){
 
 	if(i->idp == 1){ //testa se o o projeto está dentro do prazo
 		if(i->idc == 1){ //testa se o projeto está dentro do orçamento
-			strcpy(i->status, "dentro prazo e dentro do orcamento");
+			strcpy(i->status, "Dentro prazo e dentro do orcamento");
 		}else if(i->idc < 1){ //testa se o projeto está acima do orçamento
-			strcpy(i->status, "dentro do prazo e acima do orcamento");
+			strcpy(i->status, "Dentro do prazo e acima do orcamento");
 		}else{ //o projeto está abaixo do orçamento!
-			strcpy(i->status, "dentro do prazo e abaixo do orcamento");
+			strcpy(i->status, "Dentro do prazo e abaixo do orcamento");
 		}
 	}else if(i->idp < 1){ //testa se o o projeto está atrasado
 		if(i->idc == 1){ //testa se o projeto está dentro do orçamento
-			strcpy(i->status, "atrasado e dentro do orçamento");
+			strcpy(i->status, "Atrasado e dentro do orçamento");
 		}else if(i->idc < 1){ //testa se o projeto está acima do orçamento
-			strcpy(i->status, "atrasado e acima do orçamento");
+			strcpy(i->status, "Atrasado e acima do orçamento");
 		}else{ //o projeto está abaixo do orçamento!
-			strcpy(i->status, "atrasado e abaixo do orçamento");
+			strcpy(i->status, "Atrasado e abaixo do orçamento");
 		}
 	}else{ //o projeto está adiantado
 		if(i->idc == 1){ //testa se o projeto está dentro do orçamento
-			strcpy(i->status, "adiantado e dentro do orçamento");
+			strcpy(i->status, "Adiantado e dentro do orçamento");
 		}else if(i->idc < 1){ //testa se o projeto está acima do orçamento
-			strcpy(i->status, "adiantado e acima do orçamento");
+			strcpy(i->status, "Adiantado e acima do orçamento");
 		}else{ //o projeto está abaixo do orçamento!
-			strcpy(i->status, "adiantado e abaixo do orçamento");
+			strcpy(i->status, "Adiantado e abaixo do orçamento");
 		}
 	}
 
